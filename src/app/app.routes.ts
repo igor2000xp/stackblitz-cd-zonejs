@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
-import {AppComponent} from "./app.component";
+import { AppComponent } from './app.component';
+import { ChangeNameComponent } from './change-name/change-name.component';
+import { ChangeAsyncComponent } from './change-async/change-async.component';
 // import { LoginComponent } from './auth/login/login.component';
 // import { RegistrationComponent } from './auth/registration/registration.component';
 // import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
@@ -10,6 +12,14 @@ export const appRoutes: Routes = [
   {
     path: 'home',
     component: AppComponent,
+  },
+  {
+    path: 'ch-name',
+    component: ChangeNameComponent,
+  },
+  {
+    path: 'ch-async',
+    component: ChangeAsyncComponent,
   },
   // {
   //   path: 'login',

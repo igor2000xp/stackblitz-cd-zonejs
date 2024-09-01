@@ -1,0 +1,15 @@
+:host {
+  .border {
+    border: solid 1px #000000;
+  }
+  .border-link {
+    border: solid 1px #0252ff;;
+}
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+
+}
+

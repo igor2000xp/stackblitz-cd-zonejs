@@ -1,4 +1,19 @@
 <h1>Hello {{ name }} from {{ title }}!</h1>
-<a target="_blank" href="https://angular.dev/overview"> Learn more about Angular </a>
+<div>
+  <a target="_blank" href="https://angular.dev/overview"> Learn more about Angular </a>
+</div>
+
+<h2>Links to Change name component</h2>
+<div class="nav-bar">
+  <div>
+    <button class="border" (click)="onHome()">Home</button>
+  </div>
+  <nav>
+    <a class="border-link" routerLink="/ch-name">Change Name</a>
+  </nav>
+  <nav>
+    <a class="border-link" routerLink="/ch-async">Async Change name</a>
+  </nav>
+</div>
 
 <router-outlet />

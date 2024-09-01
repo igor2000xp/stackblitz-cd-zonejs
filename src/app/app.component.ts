@@ -1,28 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'my-app';
   name = 'Angular';
+  router = inject(Router);
+
+  onHome() {
+    this.router.navigate(['/']);
+  }
 }
-// @Component({
-//   selector: 'app-root',
-//   standalone: true,
-//   template: `
-//     <h1>Hello from {{ name }}!</h1>
-//     <a target="_blank" href="https://angular.dev/overview">
-//       Learn more about Angular
-//     </a>
-//   `,
-// })
-// export class App {
-//   name = 'Angular';
-// }
